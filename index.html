@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Content Rewriting Tool</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>AI Content Rewriting Tool</h1>
+    
+    <label for="InputText">Enter Content</label>
+    <textarea id="InputText" placeholder="Paste your text here..."></textarea>
+    
+    <label for="tone">Select Tone</label>
+    <select id="tone">
+      <option value="simple">Simple</option>
+      <option value="professional">Professional</option>
+      <option value="friendly">Friendly</option>
+    </select>
+    
+    <button onclick="rewrite()">Rewrite</button>
+    
+    <div class="output-section">
+      <h2>Rewritten Content</h2>
+      <div id="output" class="output-box">Your rewritten content will appear here.</div>
+      <button onclick="copyOutput()" id="copyBtn">Copy</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

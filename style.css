@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url('dbg2.jpg') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 20px;
+  color: #e6e6e6;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.container {
+  max-width: 720px;
+  background: rgba(255, 255, 255, 0.05); /* Glass background */
+  margin: 50px auto;
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(12px); /* Glassmorphism effect */
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+  transform: translateY(10px);
+  opacity: 0;
+  animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+h1, h2 {
+  text-align: center;
+  color: #00f7ff;
+  font-weight: 600;
+  text-shadow: 0 0 12px rgba(0, 255, 255, 0.5);
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: 500;
+  margin-top: 20px;
+  display: block;
+  color: #cccccc;
+}
+
+textarea {
+  width: 100%;
+  height: 180px;
+  padding: 15px;
+  font-size: 16px;
+  background-color: rgba(20, 20, 20, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  color: #f1f1f1;
+  resize: vertical;
+  margin-top: 8px;
+  box-sizing: border-box;
+  transition: all 0.3s ease, box-shadow 0.3s ease;
+}
+
+textarea:focus {
+  border-color: #00f7ff;
+  background-color: rgba(35, 35, 35, 0.6);
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+select {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  margin-top: 8px;
+  border-radius: 10px;
+  background-color: rgba(20, 20, 20, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #f1f1f1;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+  transition: all 0.3s ease;
+}
+
+select:hover {
+  border-color: #00f7ff;
+  background-color: rgba(35, 35, 35, 0.6);
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 20px;
+  background: linear-gradient(135deg, #00f7ff, #1ac6ff);
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease;
+  z-index: 0;
+}
+
+button:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+button:hover {
+  background: linear-gradient(135deg, #1ac6ff, #00f7ff);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 204, 255, 0.4);
+}
+
+.output-section {
+  margin-top: 30px;
+}
+
+.output-section h2 {
+  font-weight: 500;
+  color: #00f7ff;
+}
+
+.output-box {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 10px;
+  min-height: 120px;
+  margin-top: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #eaeaea;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.6;
+  transition: all 0.3s ease;
+  white-space: pre-wrap;
+}
+
+.output-box:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 20px rgba(0, 204, 255, 0.5);
+}
+
+textarea::placeholder,
+input::placeholder,
+select::placeholder {
+  font-weight: 300;
+  color: rgba(200, 200, 200, 0.7);
+  opacity: 1;
+}
+
+#copyBtn {
+  margin-top: 10px;
+  background: linear-gradient(135deg, #00f7ff, #1ac6ff);
+  color: #000;
+}
+
+#copyBtn:hover {
+  background: linear-gradient(135deg, #1ac6ff, #00f7ff);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 25px;
+    margin: 30px 15px;
+  }
+}

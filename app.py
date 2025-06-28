@@ -4,7 +4,6 @@ from dotenv import load_dotenv
 import os
 import requests
 
-# Load environment variables
 load_dotenv()
 api_key = os.getenv("OPENROUTER_API_KEY")
 
@@ -29,7 +28,7 @@ def rewrite_content():
         }
 
         body = {
-            "model": "mistralai/mixtral-8x7b-instruct",  # Other options: "mistralai/mixtral-8x7b-instruct", "meta-llama/llama-3-8b-instruct"
+            "model": "mistralai/mixtral-8x7b-instruct",  
             "messages": [
                 {"role": "user", "content": prompt}
             ]

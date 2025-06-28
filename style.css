@@ -17,13 +17,13 @@ body {
 
 .container {
   max-width: 720px;
-  background: rgba(255, 255, 255, 0.05); /* Glass background */
+  background: rgba(255, 255, 255, 0.05);
   margin: 50px auto;
   padding: 40px;
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(12px); /* Glassmorphism effect */
+  backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   transition: all 0.3s ease;
   transform: translateY(10px);
